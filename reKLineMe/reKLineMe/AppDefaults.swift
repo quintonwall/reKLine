@@ -36,6 +36,12 @@ class AppDefaults {
                                  orgId: "00D36000000kFKB",
                                  deploymentId: "0NW36000000Gmxc")
         
+       
+        options.featureClientFrontCameraEnabled = true
+        options.featureClientBackCameraEnabled = true
+        options.initialCameraType = SOSCameraType.FrontFacing
+        options.featureClientScreenSharingEnabled = true
+        
         return options
     }
     

@@ -119,7 +119,20 @@
                     <view key="view" contentMode="scaleToFill" id="4sC-2F-ww6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SV-Do-QYj">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="liveAgentTapped:" destination="PG2-oX-8Pm" eventType="touchUpInside" id="2FQ-HE-RbV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YaG-uT-Yc1" firstAttribute="top" secondItem="5SV-Do-QYj" secondAttribute="bottom" constant="20" id="vO6-ig-59x"/>
+                            <constraint firstItem="5SV-Do-QYj" firstAttribute="centerX" secondItem="4sC-2F-ww6" secondAttribute="centerX" id="xhf-ki-07p"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lk4-m7-i2h">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="o4N-UW-z7K">
@@ -128,6 +141,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="liveAgentButton" destination="5SV-Do-QYj" id="NHC-uO-Mzg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J8-wr-LxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
