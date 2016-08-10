@@ -22,8 +22,8 @@ class WelcomeTourPageViewController: UIPageViewController, UIPageViewControllerD
         super.viewDidLoad()
         
         
-        arrPageTitle = ["Search for your next dream home with Dreamhouse.", "Tap favorite to save a property and stay up to date on price changes.", "And even go on a virtual tour with our unique dreamcam.", "To get started, simply sign up with your Twitter id."];
-        arrPagePhoto = ["welcome1.png", "welcome2.png", "welcome3.png", "welcome4.png"];
+        arrPageTitle = ["At KLM, we believe in the traditional values of aviation.", "Nothing is more important than an enjoyable experience when traveling.", "We invite you to reKLine. You're with family.", "Buckle your seats. Let's travel together"];
+        arrPagePhoto = ["welcome-tour1.png", "welcome-tour2.png", "welcome-tour4.png", "welcome-tour3.png"];
         self.dataSource = self
         
         

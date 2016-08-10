@@ -28,6 +28,14 @@ class SideMenuViewController: UIViewController, ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
+        
+        if(!AppDefaults.hasViewedWelcomeTour()) {
+            dispatch_async(dispatch_get_main_queue()) {
+                [unowned self] in
+                self.performSegueWithIdentifier("welcometour", sender: self)
+            }
+
+        }
     }
     
     override func didReceiveMemoryWarning() {

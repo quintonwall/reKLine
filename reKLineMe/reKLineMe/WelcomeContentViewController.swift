@@ -63,11 +63,20 @@ class WelcomeContentViewController: UIViewController {
     }
     
     @IBAction func getStartedTapped(sender: AnyObject) {
-        
+        welcomeTourCompleted()
+
     }
     
     @IBAction func skipTapped(sender: AnyObject) {
+        welcomeTourCompleted()
+    }
+    
+    private func welcomeTourCompleted() {
+        AppDefaults.didViewWelcomeTour(true)
         
+        self.dismissViewControllerAnimated(true, completion: {
+            print("welcome tour completed.")
+        })
     }
     
    

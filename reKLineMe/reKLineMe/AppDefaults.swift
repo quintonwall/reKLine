@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+let KEY_VIEWED_WELCOME_TOUR : String = "rekline-show-welcome-tour"
 
 class AppDefaults {
     
@@ -19,6 +19,24 @@ class AppDefaults {
     static let klmGrey: UIColor = UIColor(netHex: 0x98969E)
     static let klmCreme: UIColor = UIColor(netHex: 0xD7D0C22)
     static let klmBlue: UIColor = UIColor(netHex: 0x109FF3)
+    
+    
+    static func hasViewedWelcomeTour() -> Bool {
+    
+        let defaults = NSUserDefaults.standardUserDefaults()
+    
+        if (defaults.objectForKey(KEY_VIEWED_WELCOME_TOUR) == nil) {
+            AppDefaults.didViewWelcomeTour(false)
+        }
+        
+        return defaults.boolForKey(KEY_VIEWED_WELCOME_TOUR)
+
+    }
+    
+    static func didViewWelcomeTour(viewTour: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(viewTour, forKey: KEY_VIEWED_WELCOME_TOUR)
+    }
     
     /*
     static func isLoggedIn() -> Bool {
